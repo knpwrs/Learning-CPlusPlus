@@ -37,3 +37,8 @@ TEST(Strings, ToNumber) {
   EXPECT_EQ(stod("3.14159"s), 3.14159);
   EXPECT_EQ(stold("3.14159"s), 3.14159L);
 }
+
+TEST(Strings, Raw) {
+  EXPECT_EQ(R"(Hello, "World"!)", "Hello, \"World\"!");
+  EXPECT_EQ(R"d-char-sequence(r-char-sequence)d-char-sequence", "r-char-sequence");
+}
