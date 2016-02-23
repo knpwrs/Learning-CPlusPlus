@@ -5,7 +5,12 @@
 using namespace std;
 using namespace PcppC02E01Strings;
 
-TEST(strings, copy) {
+TEST(Strings, Copy) {
   string str = "FooBar";
+  EXPECT_TRUE(copy(str) == str);
+}
+
+TEST(Strings, CopyLiteral) {
+  auto str = "FooBar"s;
   EXPECT_TRUE(copy(str) == str);
 }
