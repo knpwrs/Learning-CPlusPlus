@@ -1,0 +1,20 @@
+# https://jonasw.de/blog/2015/07/22/develop/cplusplus14-on-travis-with-cmake/
+language: cpp
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - cmake-data
+      - g++-5
+      - gcc-5
+install:
+  - export CXX="g++-5" CC="gcc-5"
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make
+  - make test
