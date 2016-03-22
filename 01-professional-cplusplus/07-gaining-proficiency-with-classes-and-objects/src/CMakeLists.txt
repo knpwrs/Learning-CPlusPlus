@@ -1,0 +1,4 @@
+add_library(SpreadsheetCell SpreadsheetCell.h SpreadsheetCell.cpp)
+add_executable(SpreadsheetCellMain main.cpp)
+target_link_libraries(SpreadsheetCellMain SpreadsheetCell)
+add_test(SpreadsheetCell SpreadsheetCellMain)
