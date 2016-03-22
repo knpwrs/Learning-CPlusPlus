@@ -28,7 +28,8 @@ decided to give learning *modern* C++ a go.
   use [git subtrees].
 * Reconciling the differences between compilers of different systems (e.g., my
   local machine and [Travis]) has proven to be more problematic than I'd like.
-  One solution I found that works well for the purpose of CI / testing is to use [Docker] with a lightweight base image such as [Alpine]. While this works well
+  One solution I found that works well for the purpose of CI / testing is to use
+  [Docker] with a lightweight base image such as [Alpine]. While this works well
   for CI / testing I believe it will actually become even more problematic for
   cross-platform applications.
 
