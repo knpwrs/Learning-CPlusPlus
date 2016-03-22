@@ -14,7 +14,7 @@ give it a go.
 
 ## Reflections (So Far)
 
-* The lack of any sort of defacto dependency management tool (to the best of my
+* The lack of any sort of de facto dependency management tool (to the best of my
   Google-fu) is somewhat frustrating. Cmake has [`ExternalProject`] which feels
   heavy, though I understand why. Then there's [Biicode] but now on separate
   occasions weeks apart their website / download doesn't work (for me) and I
