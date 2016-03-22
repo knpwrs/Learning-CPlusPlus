@@ -1,21 +1,6 @@
-# https://jonasw.de/blog/2015/07/22/develop/cplusplus14-on-travis-with-cmake/
+sudo: required
 language: cpp
-addons:
-  apt:
-    sources:
-      - george-edison55-precise-backports
-      - ubuntu-toolchain-r-test
-    packages:
-      - cmake
-      - cmake-data
-      - g++-5
-      - gcc-5
-install:
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
-  - if [ "$CXX" = "clang++" ]; then export CXX="clang++-3.7" CC="clang-3.7"; fi
+services:
+  - docker
 script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - make
-  - make test
+  - docker build -t knpwrs/learning-cpp .
