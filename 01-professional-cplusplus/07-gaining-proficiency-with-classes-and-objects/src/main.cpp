@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include "SpreadsheetCell.h"
 
 using namespace std;
