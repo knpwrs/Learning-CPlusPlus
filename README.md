@@ -9,8 +9,9 @@ Modern C++]. Beyond what the books cover, I am also going to be using [CLion],
 C++ was actually the first "real" language I learned back in High School. I
 never got into the really advanced topics, however, and I started using Java as
 my primary language in college before moving on to Scala and then JavaScript.
-One of my friends has been raving about how awesome C++14 is so I decided to
-give it a go.
+One of my friends has been raving about how awesome C++14 is, and I am
+interested in gaining a better understanding of native node.js modules so I
+decided to give learning *modern* C++ a go.
 
 ## Reflections (So Far)
 
