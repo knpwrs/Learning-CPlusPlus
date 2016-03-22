@@ -32,6 +32,12 @@ decided to give learning *modern* C++ a go.
   [Docker] with a lightweight base image such as [Alpine]. While this works well
   for CI / testing I believe it will actually become even more problematic for
   cross-platform applications.
+* [CLion] is a little bit deceptive. I had [Google Test] working but then when I
+  went to do a build in my terminal it wasn't working. I had to do some more
+  work to figure out why that was the case (see [419165a]). Sometimes
+  autocomplete also breaks down and the IDE reports errors that aren't actually
+  errors. Maybe I'm doing something wrong but based on my experience with other
+  JetBrains IDEs and plugins I've come to expect more from them.
 
 ## License
 
@@ -39,6 +45,7 @@ Most of the code will be out of the books with possibly a few modifications here
 and there. See the book licenses for license information regarding the code in
 this repository.
 
+[419165a]: https://github.com/knpwrs/Learning-CPlusPlus/commit/419165ae576b878d4e3a5b4881f40ebe4b27e21e
 [`ExternalProject`]: https://cmake.org/cmake/help/v3.2/module/ExternalProject.html "CMake External Project"
 [Alpine]: http://www.alpinelinux.org/ "Alpine Linux"
 [Biicode]: https://www.biicode.com/ "Biicode Dependency Manager"
