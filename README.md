@@ -25,6 +25,11 @@ give it a go.
   project-by-project basis (e.g., [rvm] or [virtualenv], to the best of my
   understanding) this can become somewhat problematic. My current solution is to
   use [git subtrees].
+* Reconciling the differences between compilers of different systems (e.g., my
+  local machine and [Travis]) has proven to be more problematic than I'd like.
+  One solution I found that works well for the purpose of CI / testing is to use [Docker] with a lightweight base image such as [Alpine]. While this works well
+  for CI / testing I believe it will actually become even more problematic for
+  cross-platform applications.
 
 ## License
 
@@ -33,9 +38,11 @@ and there. See the book licenses for license information regarding the code in
 this repository.
 
 [`ExternalProject`]: https://cmake.org/cmake/help/v3.2/module/ExternalProject.html "CMake External Project"
+[Alpine]: http://www.alpinelinux.org/ "Alpine Linux"
 [Biicode]: https://www.biicode.com/ "Biicode Dependency Manager"
 [CLion]: https://www.jetbrains.com/clion/ "CLion"
 [CMake]: https://cmake.org/ "CMake"
+[Docker]: https://www.docker.com/ "Docker"
 [Effective Modern C++]: http://shop.oreilly.com/product/0636920033707.do?cmp=af-code-books-video-product_cj_0636920033707_7708709 "Effective Modern C++"
 [git subtrees]: https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844#.e2payrroy "git subtrees: a tutorial"
 [Google Test]: https://github.com/google/googletest "Google Test"
