@@ -4,6 +4,14 @@ I am working through the books [Professional C++, Third Edition] and [Effective
 Modern C++]. Beyond what the books cover, I am also going to be using [CLion],
 [CMake], [Travis], and [Google Test] along my educational journey.
 
+## Background
+
+C++ was actually the first "real" language I learned back in High School. I
+never got into the really advanced topics, however, and I started using Java as
+my primary language in college before moving on to Scala and then JavaScript.
+One of my friends has been raving about how awesome C++14 is so I decided to
+give it a go.
+
 ## License
 
 Most of the code will be out of the books with possibly a few modifications here
