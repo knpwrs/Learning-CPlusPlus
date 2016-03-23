@@ -4,6 +4,15 @@
 using namespace std;
 
 namespace PcppC02E07 {
+  SpreadsheetCell::SpreadsheetCell() : mValue(0) {
+    // mValue initialized above before constructor is called, this has implications for const members and similar
+    // initialization is done in declaration order, not the order above!
+    // mValue = 0; // Generated default constructor does not create language primitives
+    // No need to initialize string value, string constructor is automatically called
+  }
+  SpreadsheetCell::SpreadsheetCell(double initialValue) {
+    setValue(initialValue);
+  }
   void SpreadsheetCell::setValue(double inValue) {
     mValue = inValue;
     mString = doubleToString(inValue);

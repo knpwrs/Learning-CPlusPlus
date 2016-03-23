@@ -3,6 +3,10 @@
 namespace PcppC02E07 {
   class SpreadsheetCell {
     public:
+      // SpreadsheetCell() = default; // Explicitly defaulted constructor
+      // SpreadsheetCell() = delete; // Explicitly deleted constructor (only static methods)
+      SpreadsheetCell();
+      SpreadsheetCell(double initialValue);
       void setValue(double inValue);
       double getValue() const;
       void setString(const std::string& inString);
