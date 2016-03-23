@@ -9,6 +9,7 @@ namespace PcppC02E07 {
       // SpreadsheetCell() = delete; // Explicitly deleted constructor (only static methods)
       SpreadsheetCell();
       SpreadsheetCell(double initialValue);
+      SpreadsheetCell(const std::string& initialString);
       // Copy constructor, called in pass-by-value scenarios or manually
       SpreadsheetCell(const SpreadsheetCell& src);
       // Copy constructors can also be defaulted or deleted:

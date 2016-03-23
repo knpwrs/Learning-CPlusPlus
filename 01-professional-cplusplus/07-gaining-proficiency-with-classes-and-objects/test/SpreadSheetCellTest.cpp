@@ -11,11 +11,17 @@ TEST(SpreadsheetCell, DefaultConstructor)
   EXPECT_EQ(stackCell.getString(), "0");
 }
 
-TEST(SpreadsheetCell, ConstructorParameter)
+TEST(SpreadsheetCell, InitialValue)
 {
   SpreadsheetCell stackCell(3.4);
   EXPECT_EQ(stackCell.getValue(), 3.4);
   EXPECT_EQ(stackCell.getString(), "3.4");
+}
+
+TEST(SpreadsheetCell, InitialString) {
+  SpreadsheetCell stackCell("5.6");
+  EXPECT_EQ(stackCell.getValue(), 5.6);
+  EXPECT_EQ(stackCell.getString(), "5.6");
 }
 
 TEST(SpreadsheetCell, SetValue)

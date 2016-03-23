@@ -15,6 +15,12 @@ namespace PcppC02E07 {
   {
     setValue(initialValue);
   }
+  // Delegated constructor
+  SpreadsheetCell::SpreadsheetCell(const string& initialString): SpreadsheetCell(stringToDouble(initialString))
+  {
+    // Empy delegated constructor
+  }
+  // Copy constructor
   SpreadsheetCell::SpreadsheetCell(const SpreadsheetCell& src) : mValue(src.mValue), mString(src.mString)
   {
     // Empty copy constructor, called in pass-by-value scenarios or manually
