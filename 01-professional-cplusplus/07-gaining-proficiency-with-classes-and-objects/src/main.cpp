@@ -1,6 +1,8 @@
 #include <iostream>
 #include <memory>
+#include <vector>
 #include "SpreadsheetCell.h"
+#include "EvenSequence.h"
 
 using namespace std;
 using namespace PcppC02E07;
@@ -60,6 +62,20 @@ int main() {
   // Copy
   auto copyCell = SpreadsheetCell(stackCell);
   cout << "copy cell: " << copyCell.getValue() << endl;
+  // Initializer-List Constructor
+  // EvenSequence p1 = {1.0, 2.0, 3.0, 4.0, 5.5, 7.7}; // or
+  EvenSequence p1 {1.0, 2.0, 3.0, 4.0, 5.5, 7.7};
+  p1.dump();
+  try {
+    EvenSequence p2 = {1.0, 2.0, 3.0};
+  } catch (const invalid_argument& err) {
+    cout << err.what() << endl;
+  }
+  // std initializer list
+  vector<string> myVec {"Hello", "World"};
+  for (auto value : myVec) {
+    cout << value << endl;
+  }
   // Done
   return 0;
 }

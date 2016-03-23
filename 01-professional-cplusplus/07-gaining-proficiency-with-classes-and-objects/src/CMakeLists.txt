@@ -1,4 +1,5 @@
 add_library(SpreadsheetCell SpreadsheetCell.h SpreadsheetCell.cpp)
+add_library(EvenSequence EvenSequence.h EvenSequence.cpp)
 add_executable(SpreadsheetCellMain main.cpp)
-target_link_libraries(SpreadsheetCellMain SpreadsheetCell)
+target_link_libraries(SpreadsheetCellMain SpreadsheetCell EvenSequence)
 add_test(SpreadsheetCell SpreadsheetCellMain)
