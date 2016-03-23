@@ -58,7 +58,7 @@ int main()
     cout << "heap arr cell " << i << ": " << moreCells[i].getValue() << endl;
     cout << "stack arr cell " << i << ": " << stackCells[i].getValue() << endl;
   }
-  delete [] moreCells; // CLEAN THE HEAP!
+  delete[] moreCells; // CLEAN THE HEAP!
   moreCells = nullptr;
   // Copy
   auto copyCell = SpreadsheetCell(stackCell);
