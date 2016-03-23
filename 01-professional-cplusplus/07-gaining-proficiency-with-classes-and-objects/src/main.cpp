@@ -9,7 +9,7 @@ using namespace PcppC02E07;
 
 int main()
 {
-  // On the stack
+  // On the stack (destroyed when out of scope)
   SpreadsheetCell stackCell, stackCell2; // Omit parentheses for the default constructor
   stackCell.setValue(6);
   stackCell2.setString("3.2");
