@@ -20,7 +20,7 @@ namespace PcppC02E07 {
     private:
       std::string doubleToString(double inValue) const;
       double stringToDouble(const std::string& inString) const;
-      double mValue;
-      std::string mString;
+      double mValue = 0; // C++11 allows initializers in class definitions
+      std::string mString = "0"; // Previously this only worked for static const integral members
   };
 }
