@@ -57,6 +57,9 @@ int main() {
   }
   delete [] moreCells; // CLEAN THE HEAP!
   moreCells = nullptr;
+  // Copy
+  auto copyCell = SpreadsheetCell(stackCell);
+  cout << "copy cell: " << copyCell.getValue() << endl;
   // Done
   return 0;
 }

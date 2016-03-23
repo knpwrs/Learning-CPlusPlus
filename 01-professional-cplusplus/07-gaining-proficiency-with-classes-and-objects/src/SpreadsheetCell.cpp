@@ -13,6 +13,9 @@ namespace PcppC02E07 {
   SpreadsheetCell::SpreadsheetCell(double initialValue) {
     setValue(initialValue);
   }
+  SpreadsheetCell::SpreadsheetCell(const SpreadsheetCell& src) : mValue(src.mValue), mString(src.mString) {
+    // Empty copy constructor, called in pass-by-value scenarios or manually
+  }
   void SpreadsheetCell::setValue(double inValue) {
     mValue = inValue;
     mString = doubleToString(inValue);
