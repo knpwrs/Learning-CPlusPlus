@@ -25,6 +25,15 @@ namespace PcppC02E07 {
   {
     // Empty copy constructor, called in pass-by-value scenarios or manually
   }
+  // Assignment operator
+  SpreadsheetCell& SpreadsheetCell::operator=(const SpreadsheetCell& rhs) {
+    if (this == &rhs) {
+      return *this;
+    }
+    mValue = rhs.mValue;
+    mString = rhs.mString;
+    return *this;
+  }
   void SpreadsheetCell::setValue(double inValue)
   {
     mValue = inValue;

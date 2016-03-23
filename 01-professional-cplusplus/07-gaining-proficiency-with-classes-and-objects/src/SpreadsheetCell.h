@@ -15,6 +15,11 @@ namespace PcppC02E07 {
       // Copy constructors can also be defaulted or deleted:
       // SpreadsheetCell(const SpreadsheetCell& src) = default;
       // SpreadsheetCell(const SpreadsheetCell& src) = delete;
+      // Assignment operator
+      SpreadsheetCell& operator=(const SpreadsheetCell& rhs);
+      // Assignment operators can also be defaulted or deleted:
+      // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = default;
+      // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = delete;
       void setValue(double inValue);
       double getValue() const;
       void setString(const std::string& inString);
