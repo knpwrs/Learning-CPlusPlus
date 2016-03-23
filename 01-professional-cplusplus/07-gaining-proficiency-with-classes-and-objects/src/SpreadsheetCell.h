@@ -2,7 +2,8 @@
 #include <string>
 
 namespace PcppC02E07 {
-  class SpreadsheetCell {
+  class SpreadsheetCell
+  {
     public:
       // SpreadsheetCell() = default; // Explicitly defaulted constructor
       // SpreadsheetCell() = delete; // Explicitly deleted constructor (only static methods)

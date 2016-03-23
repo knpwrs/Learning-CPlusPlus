@@ -7,7 +7,8 @@
 using namespace std;
 using namespace PcppC02E07;
 
-int main() {
+int main()
+{
   // On the stack
   SpreadsheetCell stackCell, stackCell2; // Omit parentheses for the default constructor
   stackCell.setValue(6);

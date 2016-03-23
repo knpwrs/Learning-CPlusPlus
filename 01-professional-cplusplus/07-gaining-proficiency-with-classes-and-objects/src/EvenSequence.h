@@ -4,7 +4,8 @@
 #include <vector>
 
 namespace PcppC02E07 {
-  class EvenSequence {
+  class EvenSequence
+  {
     public:
       EvenSequence(std::initializer_list<double> args);
       void dump() const;

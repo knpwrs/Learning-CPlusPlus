@@ -4,19 +4,22 @@
 using namespace std;
 using namespace PcppC02E07;
 
-TEST(SpreadsheetCell, DefaultConstructor) {
+TEST(SpreadsheetCell, DefaultConstructor)
+{
   SpreadsheetCell stackCell;
   EXPECT_EQ(stackCell.getValue(), 0);
   EXPECT_EQ(stackCell.getString(), "0");
 }
 
-TEST(SpreadsheetCell, ConstructorParameter) {
+TEST(SpreadsheetCell, ConstructorParameter)
+{
   SpreadsheetCell stackCell(3.4);
   EXPECT_EQ(stackCell.getValue(), 3.4);
   EXPECT_EQ(stackCell.getString(), "3.4");
 }
 
-TEST(SpreadsheetCell, SetValue) {
+TEST(SpreadsheetCell, SetValue)
+{
   SpreadsheetCell stackCell;
   stackCell.setValue(3);
   EXPECT_EQ(stackCell.getValue(), 3);

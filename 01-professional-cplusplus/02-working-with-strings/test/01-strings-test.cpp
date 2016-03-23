@@ -5,17 +5,20 @@
 using namespace std;
 using namespace PcppC02E01Strings;
 
-TEST(Strings, Copy) {
+TEST(Strings, Copy)
+{
   string str = "FooBar";
   EXPECT_EQ(copy(str), str);
 }
 
-TEST(Strings, CopyLiteral) {
+TEST(Strings, CopyLiteral)
+{
   auto str = "FooBar"s;
   EXPECT_EQ(copy(str), str);
 }
 
-TEST(Strings, FromNumber) {
+TEST(Strings, FromNumber)
+{
   EXPECT_EQ(to_string(-4), "-4"s);
   EXPECT_EQ(to_string(4U), "4"s);
   EXPECT_EQ(to_string(-5L), "-5"s);
@@ -27,7 +30,8 @@ TEST(Strings, FromNumber) {
   EXPECT_EQ(to_string(3.14L), "3.140000"s);
 }
 
-TEST(Strings, ToNumber) {
+TEST(Strings, ToNumber)
+{
   EXPECT_EQ(stoi("-4"s), -4);
   EXPECT_EQ(stol("-5"s), -5L);
   EXPECT_EQ(stoul("5"s), 5L);
@@ -38,7 +42,8 @@ TEST(Strings, ToNumber) {
   EXPECT_EQ(stold("3.14159"s), 3.14159L);
 }
 
-TEST(Strings, Raw) {
+TEST(Strings, Raw)
+{
   EXPECT_EQ(R"(Hello, "World"!)", "Hello, \"World\"!");
   EXPECT_EQ(R"d-char-sequence(r-char-sequence)d-char-sequence", "r-char-sequence");
 }
