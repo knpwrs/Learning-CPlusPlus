@@ -23,4 +23,8 @@ namespace PcppC02E07 {
     }
     cout << endl;
   }
+  
+  int EvenSequence::size() const {
+    return mSequence.size();
+  }
 }
