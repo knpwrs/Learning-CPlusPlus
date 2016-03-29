@@ -5,6 +5,7 @@
 #include "EvenSequence.h"
 
 using namespace std;
+using namespace PcppSpreadsheet;
 using namespace PcppC02E07;
 
 int main()

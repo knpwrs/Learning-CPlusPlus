@@ -2,7 +2,7 @@
 #include "SpreadsheetCell.h"
 
 using namespace std;
-using namespace PcppC02E07;
+using namespace PcppSpreadsheet;
 
 TEST(SpreadsheetCell, DefaultConstructor)
 {

@@ -3,7 +3,7 @@
 #include <sstream>
 using namespace std;
 
-namespace PcppC02E07 {
+namespace PcppSpreadsheet {
   SpreadsheetCell::SpreadsheetCell()/* : mValue(0)*/ // Now initialized in class definition (see header)
   {
     // mValue initialized above before constructor is called, this has implications for const members and similar

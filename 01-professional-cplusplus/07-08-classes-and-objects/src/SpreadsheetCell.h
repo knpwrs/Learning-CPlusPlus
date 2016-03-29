@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace PcppC02E07 {
+namespace PcppSpreadsheet {
   class SpreadsheetCell
   {
     public:
