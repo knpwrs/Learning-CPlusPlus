@@ -1,3 +1,4 @@
+add_library(Spreadsheet Spreadsheet.h Spreadsheet.cpp)
 add_library(SpreadsheetCell SpreadsheetCell.h SpreadsheetCell.cpp)
 add_library(EvenSequence EvenSequence.h EvenSequence.cpp)
 add_executable(SpreadsheetCellMain main.cpp)
