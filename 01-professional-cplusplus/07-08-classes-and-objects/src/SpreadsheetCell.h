@@ -29,5 +29,6 @@ namespace PcppSpreadsheet {
       static double stringToDouble(const std::string& inString);
       double mValue = 0; // C++11 allows initializers in class definitions
       std::string mString = "0"; // Previously this only worked for static const integral members
+      mutable int mNumAccesses = 0; // Can be changed from const methods
   };
 }

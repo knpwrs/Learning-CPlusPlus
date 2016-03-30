@@ -41,6 +41,7 @@ namespace PcppSpreadsheet {
   }
   double SpreadsheetCell::getValue() const
   {
+    mNumAccesses++;
     return mValue;
   }
   void SpreadsheetCell::setString(const string& inString)
@@ -50,6 +51,7 @@ namespace PcppSpreadsheet {
   }
   const string& SpreadsheetCell::getString() const
   {
+    mNumAccesses++;
     return mString;
   }
   string SpreadsheetCell::doubleToString(double inValue)
