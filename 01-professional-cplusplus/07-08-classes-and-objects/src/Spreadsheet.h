@@ -7,7 +7,7 @@ namespace PcppSpreadsheet {
     public:
       static const unsigned int kMaxWidth = 100;
       static const unsigned int kMaxHeight = 100;
-      Spreadsheet(int inWidth, int inHeight);
+      Spreadsheet(int inWidth = kMaxWidth, int inHeight = kMaxHeight);
       Spreadsheet(const Spreadsheet& src); // Copy constructor, should be implemented for dynamic memory
       // Spreadsheet(const Spreadsheet& src) = delete; // Otherwise explicitly delete
       ~Spreadsheet(); // Destructor, called when object is destroyed, should be implemented for dynamic memory
@@ -16,6 +16,8 @@ namespace PcppSpreadsheet {
       unsigned int getId() const;
       void setCellAt(int x, int y, const SpreadsheetCell& cell);
       SpreadsheetCell& getCellAt(int x, int y) const; // Not const in book
+      int getWidth() const; // Not in book
+      int getHeight() const; // Not in book
     private:
       static unsigned int sCounter;
       const unsigned int mId;

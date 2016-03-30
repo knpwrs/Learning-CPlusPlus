@@ -27,3 +27,23 @@ TEST(Spreadsheet, BasicOps)
   EXPECT_EQ(ss2.getCellAt(0, 0).getValue(), 8);
   EXPECT_EQ(ss.getCellAt(0, 0).getValue(), 0);
 }
+
+TEST(Spreadsheet, DefaultArgs)
+{
+  Spreadsheet ss;
+  EXPECT_EQ(ss.getWidth(), 100);
+  EXPECT_EQ(ss.getHeight(), 100);
+  Spreadsheet ss2(50);
+  EXPECT_EQ(ss2.getWidth(), 50);
+  EXPECT_EQ(ss2.getHeight(), 100);
+  Spreadsheet ss3(50, 75);
+  EXPECT_EQ(ss3.getWidth(), 50);
+  EXPECT_EQ(ss3.getHeight(), 75);
+}
+
+TEST(Spreadsheet, Clamping)
+{
+  Spreadsheet ss(Spreadsheet::kMaxWidth + 1, Spreadsheet::kMaxHeight + 1);
+  EXPECT_EQ(ss.getWidth(), Spreadsheet::kMaxWidth);
+  EXPECT_EQ(ss.getHeight(), Spreadsheet::kMaxHeight);
+}

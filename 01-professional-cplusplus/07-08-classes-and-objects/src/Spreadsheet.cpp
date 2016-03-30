@@ -82,6 +82,16 @@ namespace PcppSpreadsheet {
     return mCells[x][y];
   }
   
+  int Spreadsheet::getWidth() const
+  {
+    return mWidth;
+  }
+  
+  int Spreadsheet::getHeight() const
+  {
+    return mHeight;
+  }
+  
   bool Spreadsheet::inRange(int val, int upper) const
   {
     return val >= 0 && val < upper;
