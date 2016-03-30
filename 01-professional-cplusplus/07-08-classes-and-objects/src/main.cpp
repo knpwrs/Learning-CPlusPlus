@@ -12,8 +12,8 @@ int main()
 {
   // On the stack (destroyed when out of scope)
   SpreadsheetCell stackCell, stackCell2; // Omit parentheses for the default constructor
-  stackCell.setValue(6);
-  stackCell2.setString("3.2");
+  stackCell.set(6);
+  stackCell2.set("3.2");
   cout << "stack cell 1: " << stackCell.getValue() << endl;
   cout << "stack cell 2: " << stackCell2.getValue() << endl;
   // Constructor on the stack
@@ -22,7 +22,7 @@ int main()
   cout << "stack cell 4: " << stackCell4.getValue() << endl;
   // On the heap
   SpreadsheetCell* heapCell = new SpreadsheetCell();
-  heapCell->setValue(3.7);
+  heapCell->set(3.7);
   cout << "heap cell 1: " << heapCell->getValue() << endl;
   delete heapCell;
   heapCell = nullptr;
@@ -33,7 +33,7 @@ int main()
   heapCell2 = nullptr;
   // Smart pointers for the heap
   auto smartCell = make_unique<SpreadsheetCell>();
-  smartCell->setValue(3.14159);
+  smartCell->set(3.14159);
   cout << "smart cell 1: " << smartCell->getValue() << endl;
   // Constructor with for pointer to the heap
   auto smartCell2 = make_unique<SpreadsheetCell>(42);

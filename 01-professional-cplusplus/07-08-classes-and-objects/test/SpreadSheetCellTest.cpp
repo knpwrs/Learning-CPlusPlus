@@ -27,10 +27,10 @@ TEST(SpreadsheetCell, InitialString) {
 TEST(SpreadsheetCell, SetValue)
 {
   SpreadsheetCell stackCell;
-  stackCell.setValue(3);
+  stackCell.set(3);
   EXPECT_EQ(stackCell.getValue(), 3);
   EXPECT_EQ(stackCell.getString(), "3");
-  stackCell.setString("4.5");
+  stackCell.set("4.5");
   EXPECT_EQ(stackCell.getValue(), 4.5);
   EXPECT_EQ(stackCell.getString(), "4.5");
 }

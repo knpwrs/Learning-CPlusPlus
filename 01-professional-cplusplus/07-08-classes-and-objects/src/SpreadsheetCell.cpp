@@ -13,7 +13,7 @@ namespace PcppSpreadsheet {
   }
   SpreadsheetCell::SpreadsheetCell(double initialValue)
   {
-    setValue(initialValue);
+    set(initialValue);
   }
   // Delegated constructor
   SpreadsheetCell::SpreadsheetCell(const string& initialString): SpreadsheetCell(stringToDouble(initialString))
@@ -34,7 +34,7 @@ namespace PcppSpreadsheet {
     mString = rhs.mString;
     return *this;
   }
-  void SpreadsheetCell::setValue(double inValue)
+  void SpreadsheetCell::set(double inValue)
   {
     mValue = inValue;
     mString = doubleToString(inValue);
@@ -44,7 +44,7 @@ namespace PcppSpreadsheet {
     mNumAccesses++;
     return mValue;
   }
-  void SpreadsheetCell::setString(const string& inString)
+  void SpreadsheetCell::set(const string& inString)
   {
     mString = inString;
     mValue = stringToDouble(inString);

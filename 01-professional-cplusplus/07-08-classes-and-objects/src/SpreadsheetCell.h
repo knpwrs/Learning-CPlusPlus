@@ -20,9 +20,9 @@ namespace PcppSpreadsheet {
       // Assignment operators can also be defaulted or deleted:
       // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = default;
       // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = delete;
-      void setValue(double inValue);
+      void set(double inValue);
+      void set(const std::string& inString);
       double getValue() const;
-      void setString(const std::string& inString);
       const std::string& getString() const;
     private:
       static std::string doubleToString(double inValue);
