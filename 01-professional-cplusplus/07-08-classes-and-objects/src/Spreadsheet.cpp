@@ -6,7 +6,8 @@ namespace PcppSpreadsheet {
   const unsigned int Spreadsheet::kMaxHeight;
   unsigned int Spreadsheet::sCounter;
   
-  Spreadsheet::Spreadsheet(int inWidth, int inHeight) :
+  Spreadsheet::Spreadsheet(int inWidth, int inHeight, const SpreadsheetApplication& theApp) :
+    mTheApp(theApp),
     mWidth(inWidth < kMaxWidth ? inWidth : kMaxWidth),
     mHeight(inHeight < kMaxHeight ? inHeight : kMaxHeight),
     mId(sCounter++)
@@ -18,6 +19,7 @@ namespace PcppSpreadsheet {
   }
   
   Spreadsheet::Spreadsheet(const Spreadsheet& src) :
+    mTheApp(src.mTheApp),
     mId(sCounter++)
   {
     copyFrom(src);
