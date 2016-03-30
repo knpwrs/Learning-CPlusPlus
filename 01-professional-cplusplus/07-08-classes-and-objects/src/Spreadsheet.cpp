@@ -2,7 +2,10 @@
 #include "Spreadsheet.h"
 
 namespace PcppSpreadsheet {
-  Spreadsheet::Spreadsheet(int inWidth, int inHeight) : mWidth(inWidth), mHeight(inHeight)
+  Spreadsheet::Spreadsheet(int inWidth, int inHeight) :
+    mWidth(inWidth < kMaxWidth ? inWidth : kMaxWidth),
+    mHeight(inHeight < kMaxHeight ? inHeight : kMaxHeight),
+    mId(sCounter++)
   {
     mCells = new SpreadsheetCell*[mWidth];
     for (int i = 0; i < mWidth; i++) {
@@ -10,7 +13,8 @@ namespace PcppSpreadsheet {
     }
   }
   
-  Spreadsheet::Spreadsheet(const Spreadsheet& src)
+  Spreadsheet::Spreadsheet(const Spreadsheet& src) :
+    mId(sCounter++)
   {
     copyFrom(src);
   }
@@ -52,6 +56,10 @@ namespace PcppSpreadsheet {
         mCells[x][y] = src.mCells[x][y];
       }
     }
+  }
+  
+  unsigned int Spreadsheet::getId() const {
+    return mId;
   }
   
   void Spreadsheet::setCellAt(int x, int y, const SpreadsheetCell& cell)
