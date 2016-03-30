@@ -2,6 +2,10 @@
 #include "Spreadsheet.h"
 
 namespace PcppSpreadsheet {
+  const unsigned int Spreadsheet::kMaxWidth;
+  const unsigned int Spreadsheet::kMaxHeight;
+  unsigned int Spreadsheet::sCounter;
+  
   Spreadsheet::Spreadsheet(int inWidth, int inHeight) :
     mWidth(inWidth < kMaxWidth ? inWidth : kMaxWidth),
     mHeight(inHeight < kMaxHeight ? inHeight : kMaxHeight),

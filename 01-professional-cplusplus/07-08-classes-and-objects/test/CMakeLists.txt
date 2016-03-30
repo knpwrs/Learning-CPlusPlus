@@ -1,10 +1,14 @@
 include_directories(${GTEST_INCLUDE})
 
+add_executable(SpreadsheetTest SpreadsheetTest.cpp)
+add_test(Spreadsheet SpreadsheetTest)
 add_executable(SpreadsheetCellTest SpreadsheetCellTest.cpp)
 add_test(SpreadsheetCell SpreadsheetCellTest)
 add_executable(EvenSequenceTest EvenSequenceTest.cpp)
 add_test(EvenSequence EvenSequenceTest)
 
+target_link_libraries(SpreadsheetTest gtest gtest_main)
+target_link_libraries(SpreadsheetTest Spreadsheet SpreadsheetCell)
 target_link_libraries(SpreadsheetCellTest gtest gtest_main)
 target_link_libraries(SpreadsheetCellTest SpreadsheetCell)
 target_link_libraries(EvenSequenceTest gtest gtest_main)
