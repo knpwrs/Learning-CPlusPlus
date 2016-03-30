@@ -52,13 +52,13 @@ namespace PcppSpreadsheet {
   {
     return mString;
   }
-  string SpreadsheetCell::doubleToString(double inValue) const
+  string SpreadsheetCell::doubleToString(double inValue)
   {
     ostringstream ostr;
     ostr << inValue;
     return ostr.str();
   }
-  double SpreadsheetCell::stringToDouble(const string& inString) const
+  double SpreadsheetCell::stringToDouble(const string& inString)
   {
     double temp;
     istringstream istr(inString);

@@ -25,8 +25,8 @@ namespace PcppSpreadsheet {
       void setString(const std::string& inString);
       const std::string& getString() const;
     private:
-      std::string doubleToString(double inValue) const;
-      double stringToDouble(const std::string& inString) const;
+      static std::string doubleToString(double inValue);
+      static double stringToDouble(const std::string& inString);
       double mValue = 0; // C++11 allows initializers in class definitions
       std::string mString = "0"; // Previously this only worked for static const integral members
   };
