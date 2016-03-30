@@ -22,8 +22,18 @@ namespace PcppSpreadsheet {
       // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = delete;
       void set(double inValue);
       void set(const std::string& inString);
-      double getValue() const;
-      const std::string& getString() const;
+      
+      // Inline methods with inline keyword:
+      double getValue() const
+      {
+        mNumAccesses++;
+        return mValue;
+      };
+      const std::string& getString() const
+      {
+        mNumAccesses++;
+        return mString;
+      }
     private:
       static std::string doubleToString(double inValue);
       static double stringToDouble(const std::string& inString);

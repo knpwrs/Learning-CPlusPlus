@@ -39,20 +39,10 @@ namespace PcppSpreadsheet {
     mValue = inValue;
     mString = doubleToString(inValue);
   }
-  double SpreadsheetCell::getValue() const
-  {
-    mNumAccesses++;
-    return mValue;
-  }
   void SpreadsheetCell::set(const string& inString)
   {
     mString = inString;
     mValue = stringToDouble(inString);
-  }
-  const string& SpreadsheetCell::getString() const
-  {
-    mNumAccesses++;
-    return mString;
   }
   string SpreadsheetCell::doubleToString(double inValue)
   {
