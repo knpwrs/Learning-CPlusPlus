@@ -34,3 +34,11 @@ TEST(SpreadsheetCell, SetValue)
   EXPECT_EQ(stackCell.getValue(), 4.5);
   EXPECT_EQ(stackCell.getString(), "4.5");
 }
+
+TEST(SpreadsheetCell, Colors)
+{
+  SpreadsheetCell cell;
+  EXPECT_EQ(cell.getColor(), SpreadsheetCell::Colors::Red);
+  cell.setColor(SpreadsheetCell::Colors::Green);
+  EXPECT_EQ(cell.getColor(), SpreadsheetCell::Colors::Green);
+}

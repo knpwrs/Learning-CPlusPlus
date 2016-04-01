@@ -60,4 +60,12 @@ namespace PcppSpreadsheet {
     }
     return temp;
   }
+  void SpreadsheetCell::setColor(Colors color)
+  {
+    mColor = color;
+  }
+  SpreadsheetCell::Colors SpreadsheetCell::getColor() const
+  {
+    return mColor;
+  }
 }

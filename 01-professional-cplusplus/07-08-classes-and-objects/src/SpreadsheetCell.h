@@ -34,11 +34,15 @@ namespace PcppSpreadsheet {
         mNumAccesses++;
         return mString;
       }
+      enum class Colors { Red = 1, Green, Blue, Yellow };
+      void setColor(Colors color);
+      Colors getColor() const;
     private:
       static std::string doubleToString(double inValue);
       static double stringToDouble(const std::string& inString);
       double mValue = 0; // C++11 allows initializers in class definitions
       std::string mString = "0"; // Previously this only worked for static const integral members
       mutable int mNumAccesses = 0; // Can be changed from const methods
+      Colors mColor = Colors::Red;
   };
 }
