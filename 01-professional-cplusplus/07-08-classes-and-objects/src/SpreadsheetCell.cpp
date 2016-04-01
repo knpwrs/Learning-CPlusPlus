@@ -41,6 +41,11 @@ namespace PcppSpreadsheet {
   // {
   //   return SpreadsheetCell(rhs.mValue + mValue);
   // }
+  SpreadsheetCell& SpreadsheetCell::operator+=(const SpreadsheetCell& rhs)
+  {
+    set(mValue + rhs.mValue);
+    return *this;
+  }
   SpreadsheetCell SpreadsheetCell::operator+(const double& value) const
   {
     return SpreadsheetCell(value + mValue);

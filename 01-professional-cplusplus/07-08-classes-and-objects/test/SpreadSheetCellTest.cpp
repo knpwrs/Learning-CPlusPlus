@@ -63,3 +63,11 @@ TEST(SpreadsheetCell, AdditionImplicit)
   auto cell2 = 4 + cell1;
   EXPECT_EQ(cell2.getValue(), 8);
 }
+
+TEST(SpreadsheetCell, AdditionAssignment)
+{
+  SpreadsheetCell cell1(4), cell2(8);
+  cell1 += cell2;
+  EXPECT_EQ(cell1.getValue(), 12);
+  EXPECT_EQ(cell2.getValue(), 8);
+}
