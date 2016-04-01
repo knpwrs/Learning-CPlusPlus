@@ -8,6 +8,9 @@ namespace PcppSpreadsheet {
       friend SpreadsheetCell operator+(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
       friend bool operator>(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
       friend bool operator<(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+      friend bool operator>=(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+      friend bool operator<=(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+      friend bool operator==(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
       // SpreadsheetCell() = default; // Explicitly defaulted constructor
       // SpreadsheetCell() = delete; // Explicitly deleted constructor (only static methods)
       SpreadsheetCell();
@@ -57,4 +60,7 @@ namespace PcppSpreadsheet {
   SpreadsheetCell operator+(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
   bool operator>(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
   bool operator<(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+  bool operator>=(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+  bool operator<=(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+  bool operator==(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
 }

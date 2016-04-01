@@ -98,4 +98,16 @@ namespace PcppSpreadsheet {
   {
     return lhs.mValue < rhs.mValue;
   }
+  bool operator>=(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs)
+  {
+    return !(lhs < rhs);
+  }
+  bool operator<=(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs)
+  {
+    return !(lhs > rhs);
+  }
+  bool operator==(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs)
+  {
+    return lhs.mValue == rhs.mValue;
+  }
 }

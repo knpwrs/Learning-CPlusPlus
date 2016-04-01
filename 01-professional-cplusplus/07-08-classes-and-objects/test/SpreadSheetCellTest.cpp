@@ -79,6 +79,25 @@ TEST(SpreadsheetCell, Comparison)
   EXPECT_TRUE(cell2 < cell1);
   EXPECT_FALSE(cell1 < cell2);
   EXPECT_FALSE(cell2 > cell1);
+  
   EXPECT_TRUE(cell1 > 4);
   EXPECT_TRUE(cell1 < 6);
+  EXPECT_FALSE(cell1 < 4);
+  EXPECT_FALSE(cell1 > 6);
+  
+  EXPECT_TRUE(cell1 >= cell1);
+  EXPECT_TRUE(cell2 >= cell2);
+  EXPECT_TRUE(cell1 <= cell1);
+  EXPECT_TRUE(cell2 <= cell2);
+  EXPECT_TRUE(cell1 >= cell2);
+  EXPECT_TRUE(cell2 <= cell2);
+  
+  EXPECT_TRUE(cell1 >= 5);
+  EXPECT_TRUE(cell2 >= cell2);
+  EXPECT_TRUE(5 <= 5);
+  EXPECT_TRUE(cell2 <= cell2);
+  EXPECT_TRUE(5 >= cell2);
+  
+  EXPECT_TRUE(cell1 == 5);
+  EXPECT_TRUE(4 == cell2);
 }
