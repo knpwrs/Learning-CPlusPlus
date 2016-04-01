@@ -71,3 +71,14 @@ TEST(SpreadsheetCell, AdditionAssignment)
   EXPECT_EQ(cell1.getValue(), 12);
   EXPECT_EQ(cell2.getValue(), 8);
 }
+
+TEST(SpreadsheetCell, Comparison)
+{
+  SpreadsheetCell cell1(5), cell2(4);
+  EXPECT_TRUE(cell1 > cell2);
+  EXPECT_TRUE(cell2 < cell1);
+  EXPECT_FALSE(cell1 < cell2);
+  EXPECT_FALSE(cell2 > cell1);
+  EXPECT_TRUE(cell1 > 4);
+  EXPECT_TRUE(cell1 < 6);
+}

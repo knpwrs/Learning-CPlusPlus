@@ -6,6 +6,8 @@ namespace PcppSpreadsheet {
   {
     public:
       friend SpreadsheetCell operator+(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+      friend bool operator>(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+      friend bool operator<(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
       // SpreadsheetCell() = default; // Explicitly defaulted constructor
       // SpreadsheetCell() = delete; // Explicitly deleted constructor (only static methods)
       SpreadsheetCell();
@@ -53,4 +55,6 @@ namespace PcppSpreadsheet {
   
   // "Global" Addition Operator (Friend)
   SpreadsheetCell operator+(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+  bool operator>(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
+  bool operator<(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
 }
