@@ -49,3 +49,10 @@ TEST(SpreadsheetCell, Addition)
   auto cell3 = cell1 + cell2;
   EXPECT_EQ(cell3.getValue(), 7);
 }
+
+TEST(SpreadsheetCell, AdditionImplicit)
+{
+  SpreadsheetCell cell1(4);
+  auto cell2 = cell1 + 6;
+  EXPECT_EQ(cell2.getValue(), 10);
+}

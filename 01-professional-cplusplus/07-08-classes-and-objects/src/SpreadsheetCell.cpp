@@ -35,11 +35,17 @@ namespace PcppSpreadsheet {
     mString = rhs.mString;
     return *this;
   }
-  // Addition operator
+  // Addition operators
   SpreadsheetCell SpreadsheetCell::operator+(const SpreadsheetCell& rhs) const
   {
     SpreadsheetCell newCell;
-    newCell.set(rhs.mValue + mValue);
+    newCell.set(rhs.mValue + mValue); // Update mValue and mString
+    return newCell;
+  }
+  SpreadsheetCell SpreadsheetCell::operator+(const double& value) const
+  {
+    SpreadsheetCell newCell;
+    newCell.set(mValue + value); // Update mValue and mString
     return newCell;
   }
   void SpreadsheetCell::set(double inValue)
