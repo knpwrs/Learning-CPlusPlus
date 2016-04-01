@@ -42,3 +42,10 @@ TEST(SpreadsheetCell, Colors)
   cell.setColor(SpreadsheetCell::Colors::Green);
   EXPECT_EQ(cell.getColor(), SpreadsheetCell::Colors::Green);
 }
+
+TEST(SpreadsheetCell, Addition)
+{
+  SpreadsheetCell cell1(4), cell2(3);
+  auto cell3 = cell1 + cell2;
+  EXPECT_EQ(cell3.getValue(), 7);
+}

@@ -26,13 +26,21 @@ namespace PcppSpreadsheet {
     // Empty copy constructor, called in pass-by-value scenarios or manually
   }
   // Assignment operator
-  SpreadsheetCell& SpreadsheetCell::operator=(const SpreadsheetCell& rhs) {
+  SpreadsheetCell& SpreadsheetCell::operator=(const SpreadsheetCell& rhs)
+  {
     if (this == &rhs) {
       return *this;
     }
     mValue = rhs.mValue;
     mString = rhs.mString;
     return *this;
+  }
+  // Addition operator
+  SpreadsheetCell SpreadsheetCell::operator+(const SpreadsheetCell& rhs) const
+  {
+    SpreadsheetCell newCell;
+    newCell.set(rhs.mValue + mValue);
+    return newCell;
   }
   void SpreadsheetCell::set(double inValue)
   {
