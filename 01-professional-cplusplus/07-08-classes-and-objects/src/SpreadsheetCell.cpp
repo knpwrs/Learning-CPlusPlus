@@ -36,19 +36,19 @@ namespace PcppSpreadsheet {
     return *this;
   }
   // Addition operators
-  // First commented to avoid ambiguity
+  // First and second commented to avoid ambiguity and show implicit conversions
   // SpreadsheetCell SpreadsheetCell::operator+(const SpreadsheetCell& rhs) const
   // {
   //   return SpreadsheetCell(rhs.mValue + mValue);
+  // }
+  // SpreadsheetCell SpreadsheetCell::operator+(const double& value) const
+  // {
+  //   return SpreadsheetCell(value + mValue);
   // }
   SpreadsheetCell& SpreadsheetCell::operator+=(const SpreadsheetCell& rhs)
   {
     set(mValue + rhs.mValue);
     return *this;
-  }
-  SpreadsheetCell SpreadsheetCell::operator+(const double& value) const
-  {
-    return SpreadsheetCell(value + mValue);
   }
   void SpreadsheetCell::set(double inValue)
   {

@@ -23,7 +23,7 @@ namespace PcppSpreadsheet {
       // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = delete;
       // Addition operators
       // SpreadsheetCell operator+(const SpreadsheetCell& rhs) const; // Commented to avoid ambiguity
-      SpreadsheetCell operator+(const double& value) const;
+      // SpreadsheetCell operator+(const double& value) const; // Commented to show implicit conversion with friend function
       SpreadsheetCell& operator+=(const SpreadsheetCell& rhs);
       void set(double inValue);
       void set(const std::string& inString);
