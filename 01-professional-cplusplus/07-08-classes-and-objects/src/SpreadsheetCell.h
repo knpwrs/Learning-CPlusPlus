@@ -5,6 +5,7 @@ namespace PcppSpreadsheet {
   class SpreadsheetCell
   {
     public:
+      friend SpreadsheetCell operator+(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
       // SpreadsheetCell() = default; // Explicitly defaulted constructor
       // SpreadsheetCell() = delete; // Explicitly deleted constructor (only static methods)
       SpreadsheetCell();
@@ -21,7 +22,7 @@ namespace PcppSpreadsheet {
       // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = default;
       // SpreadsheetCell& operator=(const SpreadsheetCell& rhs) = delete;
       // Addition operators
-      SpreadsheetCell operator+(const SpreadsheetCell& rhs) const;
+      // SpreadsheetCell operator+(const SpreadsheetCell& rhs) const; // Commented to avoid ambiguity
       SpreadsheetCell operator+(const double& value) const;
       void set(double inValue);
       void set(const std::string& inString);
@@ -48,4 +49,7 @@ namespace PcppSpreadsheet {
       mutable int mNumAccesses = 0; // Can be changed from const methods
       Colors mColor = Colors::Red;
   };
+  
+  // "Global" Addition Operator (Friend)
+  SpreadsheetCell operator+(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs);
 }

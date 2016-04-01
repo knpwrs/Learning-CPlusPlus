@@ -50,9 +50,16 @@ TEST(SpreadsheetCell, Addition)
   EXPECT_EQ(cell3.getValue(), 7);
 }
 
-TEST(SpreadsheetCell, AdditionImplicit)
+TEST(SpreadsheetCell, AdditionDouble)
 {
   SpreadsheetCell cell1(4);
   auto cell2 = cell1 + 6;
   EXPECT_EQ(cell2.getValue(), 10);
+}
+
+TEST(SpreadsheetCell, AdditionImplicit)
+{
+  SpreadsheetCell cell1(4);
+  auto cell2 = 4 + cell1;
+  EXPECT_EQ(cell2.getValue(), 8);
 }

@@ -36,10 +36,11 @@ namespace PcppSpreadsheet {
     return *this;
   }
   // Addition operators
-  SpreadsheetCell SpreadsheetCell::operator+(const SpreadsheetCell& rhs) const
-  {
-    return SpreadsheetCell(rhs.mValue + mValue);
-  }
+  // First commented to avoid ambiguity
+  // SpreadsheetCell SpreadsheetCell::operator+(const SpreadsheetCell& rhs) const
+  // {
+  //   return SpreadsheetCell(rhs.mValue + mValue);
+  // }
   SpreadsheetCell SpreadsheetCell::operator+(const double& value) const
   {
     return SpreadsheetCell(value + mValue);
@@ -77,5 +78,10 @@ namespace PcppSpreadsheet {
   SpreadsheetCell::Colors SpreadsheetCell::getColor() const
   {
     return mColor;
+  }
+  // "Global" Addition Operator (Friend)
+  SpreadsheetCell operator+(const SpreadsheetCell& lhs, const SpreadsheetCell& rhs)
+  {
+    return SpreadsheetCell(lhs.mValue + rhs.mValue);
   }
 }
